@@ -1,0 +1,42 @@
+import turtle as t
+t.penup()
+t.shape('turtle')
+t.bgcolor('dodger blue')
+def tri(x,y,a,color,turn):
+    t.goto(x,y)
+    t.pendown()
+    t.color(color)
+    t.begin_fill()
+    t.forward(a)
+    t.left(turn)
+    t.forward(a)
+    t.goto(x,y)
+    t.end_fill()
+    t.penup()
+
+def srp(x,y,a,b,color,aturn,bturn):
+    t.goto(x,y)
+    t.pendown()
+    t.color(color)
+    t.begin_fill()
+    for i in range(2):
+        t.forward(a)
+        t.left(aturn)
+        t.forward(b)
+        t.left(bturn)
+    t.end_fill()
+    t.penup()
+t.right(45)
+tri(-100,100,100,'orange',-90)
+tri(43,100,100,'light blue',-90)
+t.right(-90)
+tri(43,100,50,'blue',90)
+srp(8,65,50,50,'red',-90,-90)
+t.right(180) 
+tri(8,-6,50,'green',90)
+srp(-63,-5,50,70,'purple',135,45)
+t.right(-135)
+tri(-28,-40,72,'yellow',90)
+t.hideturtle()
+
+
